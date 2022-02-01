@@ -58,7 +58,10 @@ class Peikko:
 
 
 ### Kirjoita luokka Sankari tähän.
+class Sankari:
 
+    def __init__(self, koko, sijainti, suunta, nopeus=1.0):
+        self
 
 def hurraa(olio):
     """Tulostaa satunnaisen hurrauksen annetulle oliolle.
