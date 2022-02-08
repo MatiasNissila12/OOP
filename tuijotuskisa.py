@@ -63,11 +63,9 @@ class Sankari:
     HURRAA = ("JEE", "TOSIJJAA", "KKONA", "KKORNER", "YESSIR")
 
     def __init__(self):
-        self.nimi
+        self.nimi = nimi
         self.rohkeus = random.randint(5, 10)
         self.katseen_voima = random.randint(3, 6)
-
-    def nimi(self):
 
     def arvo_hurraus(self):
 
