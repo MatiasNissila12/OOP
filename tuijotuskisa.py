@@ -1,6 +1,9 @@
 import random
 import time
 
+class Olento:
+    def arvo_hurraus(self):
+
 
 class Peikko:
     """Luokka, joka kuvaa Peikon.
