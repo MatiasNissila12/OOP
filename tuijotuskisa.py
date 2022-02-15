@@ -2,6 +2,10 @@ import random
 import time
 
 class Olento:
+    
+    def __init__(self, pohjarohkeus):
+        self.rohkeus = random.randint(pohjarohkeus, pohjarohkeus + 3)
+    
     def arvo_hurraus(self):
 
 
