@@ -93,9 +93,7 @@ class Sankari(Olento):
 
     def __init__(self):
         """Konstruktori."""
-        super().__init__(nimi)
-        self.rohkeus = random.randint(5, 10)
-        self.katseen_voima = random.randint(3, 6)
+        super().__init__(nimi 8, 4)
 
     def arvo_hurraus(self):
         """Muodostaa satunnaisen tekstin annetuista sanoista.
