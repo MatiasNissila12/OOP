@@ -18,6 +18,7 @@ class Olento:
         self.nimi = nimi
         self.rohkeus = random.randint(pohjarohkeus, pohjarohkeus + 4)
         self.katseen_voima = random.randint(pohjavoima, pohjavoima + 3)
+        
 
     def arvo_hurraus():
         """Palauttaa satunnaisen hurraushuudahduksen.
@@ -43,7 +44,7 @@ class Peikko(Olento):
     NIMITAVUT = ("Ur", "Gar", "Grah", "Gur", "Kan", "Kazah", "Bar", "Bazh", "Ragh", "Rudz")
     RIEMUTAVUT = ("Agh", "Ugh", "Ourgh", "Drar", "Brar", "Dza", "Gra", "Gur", "Rah", "Urgh", "Ra")
 
-    def __init__(self):
+    def __init__(self, rohkeus=4, voima=2):
         """Konstruktori."""
         nimi = self._arvo_sanat(self.NIMITAVUT, 3, "-")
         super().__init__(nimi, 4, 2)
@@ -77,6 +78,27 @@ class Peikko(Olento):
         """
         return self._arvo_sanat(self.RIEMUTAVUT, 8, " ", 0.7)
 
+class Vuorenpeikko(Peikko):
+    """Luokka, joka kuvaa Vuorenpeikon."""
+
+    NIMITAVUT = ("Ur", "Gar", "Grah", "Gur", "Kan", "Kazah", "Bar", "Bazh", "Ragh", "Rudz")
+    RIEMUTAVUT = ("Agh", "Ugh", "Ourgh", "Drar", "Brar")
+
+    def __init__(self):
+        """Konstruktori."""
+        pass
+
+class Luolapeikko(Peikko):
+    """Luokka, joka kuvaa Luolapeikon."""
+
+    NIMITAVUT = ("Ur", "Gar", "Grah", "Gur", "Kan", "Kazah", "Bar", "Bazh", "Ragh", "Rudz")
+    RIEMUTAVUT = ("Agh", "Ugh", "Ourgh", "Drar", "Brar")
+
+    def __init__(self):
+        """Konstruktori."""
+        pass
+
+
 
 ### Kirjoita luokka Sankari tähän.
 class Sankari(Olento):
@@ -94,6 +116,7 @@ class Sankari(Olento):
     def __init__(self):
         """Konstruktori."""
         super().__init__(nimi 8, 4)
+        
 
     def arvo_hurraus(self):
         """Muodostaa satunnaisen tekstin annetuista sanoista.
@@ -177,7 +200,8 @@ while sankari.rohkeus > 0:
     time.sleep(0.7)
 
     # Tulostetaan vastaan tulevan peikon tiedot.
-    peikko = Peikko()
+    Vihu = random.choice([Peikko, Vuorenpeikko, Luolapeikko])
+    Peikko = Vihu()
     peikon_tiedot = peikko.nimi + " [" + str(peikko.rohkeus) + "]"
     print("Vastaan tulee hurja %s!" % peikon_tiedot)
     time.sleep(1)
