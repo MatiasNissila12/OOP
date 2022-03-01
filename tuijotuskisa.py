@@ -46,9 +46,7 @@ class Peikko(Olento):
     def __init__(self):
         """Konstruktori."""
         nimi = self._arvo_sanat(self.NIMITAVUT, 3, "-")
-        super().__init__(nimi)
-        self.rohkeus = random.randint(4, 8)
-        self.katseen_voima = random.randint(2, 4)
+        super().__init__(nimi, 4, 2)
 
     def _arvo_sanat(self, tavut, n, erotin, p=0.5):
         """Muodostaa satunnaisen tekstin annetuista tavuista.
