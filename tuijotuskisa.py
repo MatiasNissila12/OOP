@@ -13,9 +13,11 @@ class Olento:
         arvo_hurraus()
     """
 
-    def __init__(self, nimi):
+    def __init__(self, nimi, pohjarohkeus=1, pohjavoima=1):
         """Konstruktori."""
         self.nimi = nimi
+        self.rohkeus = random.randint(pohjarohkeus, pohjarohkeus + 4)
+        self.katseen_voima = random.randint(pohjavoima, pohjavoima + 3)
 
     def arvo_hurraus():
         """Palauttaa satunnaisen hurraushuudahduksen.
